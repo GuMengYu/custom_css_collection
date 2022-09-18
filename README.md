@@ -8,3 +8,5 @@ v2ex设置中自定义css填入
 ```
 
 或者自己托管css, (v2ex自定义css的输入框限制了9k大小)
+
+![picture](./snipaste.png)
