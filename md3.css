@@ -135,7 +135,7 @@
   --v-theme-inverseSurface-overlay-multiplier: 2;
   --v-rounded: 4px;
   --v-rounded-lg: 14px;
-  --v-rounded-xl: 24px
+  --v-rounded-xl: 24px;
   --box-border-radius: 14px;
   --v-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12)
 }
