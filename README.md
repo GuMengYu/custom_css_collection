@@ -7,7 +7,7 @@
 
 v2ex设置中自定义css填入
 ```
-@import url("https://v2ex-style.pages.dev/style.css");
+@import url("https://v2ex-md-style.pages.dev/v2ex_md3.css");
 ```
 
 或者自己托管css, (v2ex自定义css的输入框限制了9k大小)
