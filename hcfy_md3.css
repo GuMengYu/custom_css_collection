@@ -1,5 +1,4 @@
-
-#popper-container {
+#app {
   --v-theme-background: 252, 252, 252;
   --v-theme-background-overlay-multiplier: 1;
   --v-theme-surface: 252, 252, 252;
@@ -113,7 +112,7 @@
   --v-high-emphasis-opacity: 1;
 }
 
-.bp4-dark #popper-container {
+.bp4-dark #app {
   --v-theme-background: 32, 26, 25;
   --v-theme-background-overlay-multiplier: 1;
   --v-theme-surface: 32, 26, 25;
@@ -223,7 +222,6 @@
 }
 
 
-/* 插件弹出阴影 */
 .bp4-elevation-4 {
   box-shadow: 0px 11px 15px -7px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 24px 38px 3px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 9px 46px 8px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12)) !important
 }
@@ -234,9 +232,20 @@
 }
 
 #translate-panel {
-  background: rgba(var(--v-theme-surface), var(--v-high-emphasis-opacity));
   border-radius: var(--v-rounded-lg);
   padding: 6px 14px 6px 14px;
+}
+
+#translate-panel .body {
+  padding: 0;
+}
+
+#translate-panel {
+  background: rgba(var(--v-theme-surface), var(--v-high-emphasis-opacity));
+}
+
+.bp4-dark #translate-panel {
+  background: rgba(var(--v-theme-surface), var(--v-high-emphasis-opacity));
 }
 
 #translate-panel .header {
@@ -244,11 +253,6 @@
   padding: 4px 0;
 }
 
-#translate-panel .body {
-  padding: 0;
-}
-
-/* 翻译结果卡片样式 */
 .bp4-card {
   border-radius: var(--v-rounded);
   padding: 8px;
@@ -265,13 +269,6 @@
   box-shadow: none;
 }
 
-/* 卡片里翻译引擎名称的样式 */
-#translate-panel .bp4-heading {
-  line-height: 28px;
-  font-size: 12px !important;
-  font-weight: 500;
-}
-
 .bp4-heading {
   color: rgba(var(--v-theme-onSurfaceVariant), var(--v-high-emphasis-opacity));
 }
@@ -280,11 +277,12 @@
   color: rgba(var(--v-theme-onSurfaceVariant), var(--v-high-emphasis-opacity));
 }
 
-.result-block .legend .source {
-  height: 28px;
+#translate-panel .bp4-heading {
+  line-height: 28px;
+  font-size: 12px !important;
+  font-weight: 500;
 }
 
-/* 按钮颜色 */
 .bp4-button:not([class*=bp4-intent-]) .bp4-icon-large:not([class*=bp4-intent-]),
 .bp4-button:not([class*=bp4-intent-]) .bp4-icon-standard:not([class*=bp4-intent-]),
 .bp4-button:not([class*=bp4-intent-]) .bp4-icon:not([class*=bp4-intent-]),
@@ -299,11 +297,15 @@
   color: rgba(var(--v-theme-onSurface), var(--v-high-emphasis-opacity));
 }
 
+
 #translate-panel .fixed {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-/* 按钮间距 */
+.result-block .legend .source {
+  height: 28px;
+}
+
 #translate-panel .header .right {
   gap: 2px
 }
@@ -321,13 +323,11 @@
   border-top: 1px solid rgba(var(--v-theme-surfaceVariant), var(--v-high-emphasis-opacity));
 }
 
-/* 圆形按钮 */
 #translate-panel .bp4-button.bp4-small,
 #translate-panel .bp4-small .bp4-button {
   border-radius: 20px;
 }
 
-/* 屏蔽快捷链接 */
 .quick-links {
   display: flex;
   gap: 6px;
@@ -347,7 +347,19 @@ button[title="图片翻译"],
 button[title="语音翻译"] {
   display: none;
 }
-/* 屏蔽消息按钮 */
+
 .right div:has(span[icon="notifications"]) {
   display: none;
+}
+
+#translate-panel .query-text {
+  padding: 0;
+  background: rgba(var(--v-theme-surfaceVariant), var(--v-high-emphasis-opacity));
+  border-radius: var(--v-rounded);
+}
+
+#translate-panel .query-text textarea.bp4-input {
+  padding: 12px 10px;
+  box-shadow: none;
+  border-radius: var(--v-rounded);
 }
